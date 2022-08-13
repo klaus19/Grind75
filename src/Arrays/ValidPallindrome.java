@@ -2,17 +2,16 @@ package Arrays;
 
 public class ValidPallindrome {
 
-    public String isPallindrome(String s){
+    public boolean isPallindrome(String s) {
 
-       s= s.replaceAll("\\s","");
-
-        return s;
+        s = s.replaceAll("[^a-zA-Z0-9]", "");
+        s = s.toLowerCase();
+        char[] ch = s.toCharArray();
+        StringBuilder sb = new StringBuilder();
+        for (int i = (ch.length - 1); i >= 0; i--) {
+            sb.append(ch[i]);
+        }
+        String s1 = sb.toString();
+        return s.equals(s1);
     }
-
-    public static void main(String[] args) {
-        ValidPallindrome vd = new ValidPallindrome();
-        String s = "A man, a plan, a canal: Panama";
-
-        System.out.println(vd.isPallindrome(s));
     }
-}
