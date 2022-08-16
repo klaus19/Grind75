@@ -3,6 +3,8 @@ package Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 public class MajorityElement {
 
     public int countMajority(int[]nums){
@@ -12,7 +14,7 @@ public class MajorityElement {
 
         for (int i=0;i<nums.length;i++){
             if (!map.containsKey(nums[i])){
-                map.put(nums[i],count+1);
+                map.put(nums[i],1);
             }else{
                 return map.get(count);
             }
